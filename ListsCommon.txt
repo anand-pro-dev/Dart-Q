@@ -1,0 +1,24 @@
+void main() {
+  List<String> value1 = ["1", "10", "22", "14", "16"];
+  List<String> value2 = ["11", "10", "22", "24", "26"];
+
+  // Convert lists to sets and find intersection
+  Set<String> commonValues = value1.toSet().intersection(value2.toSet());
+
+  // Print the common values
+  print('Common elements: $commonValues');
+
+  // Remove common values from both lists
+  List<String> newList1 = value1.where((value) => !commonValues.contains(value)).toList();
+  List<String> newList2 = value2.where((value) => !commonValues.contains(value)).toList();
+
+  // Print the new lists
+  print('New List 1: $newList1');
+  print('New List 2: $newList2');
+
+  // Combine both new lists into one
+  List<String> combinedList = [...newList1, ...newList2];
+
+  // Print the combined list
+  print('Combined New List: $combinedList');
+}

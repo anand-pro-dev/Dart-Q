@@ -1,0 +1,40 @@
+void main() {
+  // List of string numbers
+  List<String> value = ["1", "10", "12", "14", "16"];
+
+  // Convert the string list to an integer list
+  List<int> intValues = value.map(int.parse).toList();
+
+  // Sort the list in ascending order
+  intValues.sort();
+
+  // Print the sorted list using a for loop
+  print('The Ordered List:');
+  for (int i = 0; i < intValues.length; i++) {
+    print(intValues[i]);
+  }
+
+  // Fix the for loop to print with correct index in descending order
+  print('Descending hello with values:');
+  for (int i = intValues.length - 1; i >= 0; i--) {
+    print('hello33 ${intValues[i]}');
+  }
+
+  // Print hello with the countdown
+  print('Countdown hello:');
+  for (int i = 10; i > 0; i--) {
+    print('hello ${i - 1}');
+  }
+
+  // Reverse the list using a for loop
+  List<int> reversedList = [];
+  for (int i = intValues.length - 1; i >= 0; i--) {
+    reversedList.add(intValues[i]);
+  }
+
+  // Print the reversed list using a for loop
+  print('The Reversed List:');
+  for (int i = 0; i < reversedList.length; i++) {
+    print(reversedList[i]);
+  }
+}

@@ -1,0 +1,15 @@
+void main() {
+  // List of string numbers
+  List<String> value = ["1", "10", "12", "14", "16"];
+  
+  // Convert the string list to an integer list
+  List<int> intValues = value.map(int.parse).toList();
+  
+  // Sort the list in descending order
+  intValues.sort((a, b) => b.compareTo(a));
+  
+  // Get the third largest value (index 2 after sorting)
+  int thirdLargest = intValues[2];
+  
+  print('The third largest value is: $thirdLargest');
+}
